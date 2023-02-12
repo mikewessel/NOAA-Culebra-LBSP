@@ -45,8 +45,11 @@ website:
         text: Code in your files
       - href: content/acknowledgements.qmd
         text: Acknowledgements
-      - href: content/Nearshore.qmd
-        text: Nearshore data Entry
+      - href: content/Nearshore.Rmd
+        text: Nearshore Data Entry
+      - href: content/Watershed.Rmd
+        text: Watershed Data Entry
+
 
 format:
   html:
