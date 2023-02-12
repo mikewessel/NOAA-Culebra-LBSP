@@ -45,8 +45,8 @@ website:
         text: Code in your files
       - href: content/acknowledgements.qmd
         text: Acknowledgements
-      - text: "Nearshore"
-        href: index.html
+      - href: content/Nearshore.rmd
+        text: Nearshore.html
 
 format:
   html:
