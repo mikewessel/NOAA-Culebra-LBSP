@@ -3,6 +3,4 @@ title: "Nearshore"
 editor: visual
 ---
 
-Use the links below to access the google forms for water quality data entry
-
-\[Field Data\](https://docs.google.com/forms/d/e/1FAIpQLSd4sNacnMR6bJ9kmtmCmxhOPChgTdoo3RkOXHCMR6f9jJdppg/viewform?vc=0&c=0&w=1&flr=0&dods)
+Use the links below to access the google forms for water quality data entry\[Field Data\](https://docs.google.com/forms/d/e/1FAIpQLSd4sNacnMR6bJ9kmtmCmxhOPChgTdoo3RkOXHCMR6f9jJdppg/viewform?vc=0&c=0&w=1&flr=0&dods)
