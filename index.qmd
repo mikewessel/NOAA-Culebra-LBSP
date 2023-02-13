@@ -12,7 +12,7 @@ This site provides links and instructions for using google forms to enter water 
 
 There are 8 sites in the Watershed sampling components that are to be sampled monthly so print 8 datasheets using the following link [Watershed Datasheets](https://docs.google.com/document/d/17oZ_msC6d49UCro2x92w2r4P4DCnu0YX/edit)
 
-There are 13 sites in the Nearshore sampling components that are to be sampled monthly so print 13 datasheets using the following link [Watershed Datasheets](https://docs.google.com/document/d/1blpa4Iob9zMFprBdBVjw-C5EYTtMRYO7/edit)
+There are 13 sites in the Nearshore sampling components that are to be sampled monthly so print 13 datasheets using the following link [Nearshore Datasheets](https://docs.google.com/document/d/1blpa4Iob9zMFprBdBVjw-C5EYTtMRYO7/edit)
 
 
 * Click the green "use template" button to make a repository with this content.  Make sure to make your repo public (since GitHub Pages doesn't work on private repos unless you have a paid account) and check box to include all the branches (so that you get the gh-pages branch).
