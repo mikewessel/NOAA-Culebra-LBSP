@@ -56,11 +56,11 @@
     "text": "Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory."
   },
   {
-    "objectID": "content/Nearshore.html",
-    "href": "content/Nearshore.html",
+    "objectID": "content/Near.html",
+    "href": "content/Near.html",
     "title": "Nearshore",
     "section": "",
-    "text": "Use the links below to access the google forms for water quality data entry[Field Data](https://docs.google.com/forms/d/e/1FAIpQLSd4sNacnMR6bJ9kmtmCmxhOPChgTdoo3RkOXHCMR6f9jJdppg/viewform?vc=0&c=0&w=1&flr=0&dods)"
+    "text": "Use the links below to access the google forms for water quality data entry"
   },
   {
     "objectID": "content/publishing.html",
