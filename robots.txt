@@ -1,1 +1,1 @@
-Sitemap: https://nmfs-opensci.github.io/NOAA-quarto-simple/sitemap.xml
+Sitemap: https://mikewessel.github.io/NOAA-Culebra-LBSP/sitemap.xml
