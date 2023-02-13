@@ -32,19 +32,7 @@ website:
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Home
-      - href: content/add-content.qmd
-        text: Add content
-      - href: content/customizing.qmd
-        text: Customizing
-      - href: content/rendering.qmd
-        text: Rendering
-      - href: content/rmarkdown.Rmd
-        text: R Markdown files
-      - href: content/code.qmd
-        text: Code in your files
-      - href: content/acknowledgements.qmd
-        text: Acknowledgements
+        text: Data Entry Portal
       - href: content/Near.Rmd
         text: Nearshore Data Entry
       - href: content/Watershed.Rmd
