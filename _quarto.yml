@@ -4,8 +4,8 @@ project:
 website:
   page-navigation: true
   title: "NOAA quarto simple"
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple"
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
+  site-url: "https://mikewessel.github.io/NOAA-Culebra-LBSP"
+  repo-url: "https://github.com/mikewessel/NOAA-Culebra-LBSP"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
 
