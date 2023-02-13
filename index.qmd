@@ -18,7 +18,7 @@ There are 13 sites in the Nearshore sampling components that are to be sampled m
 
 * Step 3: Process Nutrient and Bacteriological samples
 
-* Step 4: Enter datausing this data entry portal. Te tabs on the left contain links to Google Forms that should be used for entering data. Do not use the spreadsheets to enter data, use the Google Forms. The spreadhseet links should be used only to check that the data are entered correctly and to correct any errors. 
+* Step 4: Enter data using this data entry portal. The tabs on the left contain links to Google Forms that should be used for entering data. Do not use the spreadsheets to enter data, use the Google Forms. The spreadsheet links should be used only to check that the data are entered correctly and to correct any errors. 
 
 
 
