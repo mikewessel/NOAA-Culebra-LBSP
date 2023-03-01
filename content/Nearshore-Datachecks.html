@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mwessel">
+<meta name="dcterms.date" content="2023-03-01">
 
-<title>NOAA quarto simple - Customize</title>
+<title>NOAA quarto simple - Nearshore_Datachecks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../content/Watershed.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -70,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Customize</h1>
+      <h1 class="quarto-secondary-nav-title">Nearshore_Datachecks</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -115,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/Nearshore-Datachecks.html" class="sidebar-item-text sidebar-link">Nearshore Data Checks</a>
+  <a href="../content/Nearshore-Datachecks.html" class="sidebar-item-text sidebar-link active">Nearshore Data Checks</a>
   </div>
 </li>
     </ul>
@@ -127,24 +130,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#edit-and-add-your-pages" id="toc-edit-and-add-your-pages" class="nav-link active" data-scroll-target="#edit-and-add-your-pages">Edit and add your pages</a></li>
-  <li><a href="#add-your-pages-the-project" id="toc-add-your-pages-the-project" class="nav-link" data-scroll-target="#add-your-pages-the-project">Add your pages the project</a></li>
+  <li><a href="#par-figure" id="toc-par-figure" class="nav-link active" data-scroll-target="#par-figure">PAr Figure</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/content/add-content.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/content/add-content.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/content/Nearshore-Datachecks.Rmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/content/Nearshore-Datachecks.Rmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Customize</h1>
+<h1 class="title d-none d-lg-block">Nearshore_Datachecks</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mwessel </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 1, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -152,24 +166,94 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="edit-and-add-your-pages" class="level2">
-<h2 class="anchored" data-anchor-id="edit-and-add-your-pages">Edit and add your pages</h2>
-<p>Edit the qmd or md files in the <code>content</code> folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).</p>
-<p>Each page should start with</p>
-<pre><code>---
-title: your title
----</code></pre>
-<p>and the first header will be the 2nd level, so <code>##</code>. Note, there are situations where you leave off</p>
-<pre><code>---
-title: your title
----</code></pre>
-<p>and start the qmd file with a level header <code>#</code>, but if using the default title yaml (in the <code>---</code> fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).</p>
-</section>
-<section id="add-your-pages-the-project" class="level2">
-<h2 class="anchored" data-anchor-id="add-your-pages-the-project">Add your pages the project</h2>
-<ul>
-<li>Add the files to <code>_quarto.yml</code></li>
-</ul>
+<p>rm(list = ls())</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Timestamp"                                    
+ [2] "Date.of.Monitoring"                           
+ [3] "Time"                                         
+ [4] "Site.ID"                                      
+ [5] "Data.recorded.by."                            
+ [6] "Data.entered.by."                             
+ [7] "Measurements.completed.and.samples.collected."
+ [8] "Sea.State"                                    
+ [9] "Wind.Direction"                               
+[10] "Wind.Speed"                                   
+[11] "Cloud.Cover.....0...100"                      
+[12] "Surface.Sample.Time"                          
+[13] "Surface.Temperature..C."                      
+[14] "Surface.Conductivity..μS.cm."                 
+[15] "Surface.Salinity..PSU."                       
+[16] "Surface.DO....saturation."                    
+[17] "Surface.DO..mg.L."                            
+[18] "Surface.pH"                                   
+[19] "Surface.Turbidity..NTU."                      
+[20] "Surface.Chl.a.Fluorescence..µg.L."            
+[21] "Surface.Chl.red.Fluorescence..µg.L."          
+[22] "Surface.CDOM..ppb."                           
+[23] "Surface..Upper.Apogee.sensor..Channel.A."     
+[24] "Surface...Lower.Apogee.sensor..Channel.B."    
+[25] "Bottom.Sample.Time"                           
+[26] "Bottom.Temperature..C."                       
+[27] "Bottom.Conductivity..μS.cm."                  
+[28] "Bottom.Salinity..PSU."                        
+[29] "Bottom.DO....saturation."                     
+[30] "Bottom.DO..mg.L."                             
+[31] "Bottom.pH"                                    
+[32] "Bottom.Turbidity..NTU."                       
+[33] "Bottom.Chl.a..Fluorescence..µg.L."            
+[34] "Bottom.Chl.red.Fluorescence..µg.L."           
+[35] "Bottom.CDOM..ppb."                            
+[36] "Bottom..Upper.Apogee..Channel.A."             
+[37] "Bottom...Lower.Apogee..Channel.B."            
+[38] "Notes..if.applicable."                        
+[39] "Enterococci.MPN.100ml..be.sure.to.convert."   </code></pre>
+</div>
+</div>
+<p>Create Simple Summary Tables</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 7
+   Site             n    mean     sd   min median    max
+   &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Surf.Sal        13  38.4   0.207  38.0   38.4   38.9 
+ 2 Surf.DO         13   6.55  0.212   6.23   6.52   6.98
+ 3 Surf.Turb       13   0.886 0.499   0.31   0.79   1.96
+ 4 Surf.Chl.red    13   0.856 0.301   0.11   0.93   1.3 
+ 5 Surf.Time*      13   7     3.89    1      7     13   
+ 6 Surf.DO.Sat     13 104.    3.69   97.8  103.   111   
+ 7 Surf.pH         13   8.21  0.0340  8.14   8.22   8.29
+ 8 Surf.Chla       13   0.153 0.120   0.01   0.12   0.4 
+ 9 Surf.CDOM       13   1.47  0.836   0.63   1.15   3.4 
+10 Bot.Temp        13  26.2   0.305  25.8   26.0   26.9 
+11 Bot.Sal         13  38.4   0.199  38.0   38.4   38.9 
+12 Bot.DO          13   6.63  0.325   6.09   6.68   7.1 
+13 Bot.Turb        13   0.864 0.373   0.36   0.72   1.85
+14 Bot.Chl.red     13   0.892 0.169   0.55   0.87   1.18
+15 Bot.Time*       13   7     3.89    1      7     13   
+16 Bot.DO.sat      13 105.    5.52   95.6  105    112.  
+17 Bot.pH          13   8.22  0.0183  8.19   8.22   8.25
+18 Bot.Chla        13   0.145 0.140  -0.02   0.11   0.51
+19 Bot.CDOM        13   1.27  0.427   0.65   1.22   1.85</code></pre>
+</div>
+</div>
+<p>Do Some Plots</p>
+<section id="par-figure" class="level2">
+<h2 class="anchored" data-anchor-id="par-figure">PAr Figure</h2>
+<p><a href="#fig-Light">Figure&nbsp;1</a> Light Attenuation by Site with Bottom Turbidity line overlay.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Light" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Nearshore-Datachecks_files/figure-html/fig-Light-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Sample Counts.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -423,6 +507,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../content/Watershed.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Watershed Data Entry</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

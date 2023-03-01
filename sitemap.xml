@@ -2,50 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/acknowledgements.html</loc>
-    <lastmod>2023-02-23T12:53:35.552Z</lastmod>
+    <lastmod>2023-03-01T19:53:26.429Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/add-content.html</loc>
-    <lastmod>2023-02-23T12:53:36.125Z</lastmod>
+    <lastmod>2023-03-01T19:53:26.820Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/code.html</loc>
-    <lastmod>2023-02-23T12:53:38.272Z</lastmod>
+    <lastmod>2023-03-01T19:53:28.620Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/customizing.html</loc>
-    <lastmod>2023-02-23T12:53:38.713Z</lastmod>
+    <lastmod>2023-03-01T19:53:28.959Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/Near.html</loc>
-    <lastmod>2023-02-23T12:53:40.411Z</lastmod>
+    <lastmod>2023-03-01T19:53:30.715Z</lastmod>
   </url>
   <url>
-    <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/publishing.html</loc>
-    <lastmod>2023-02-23T12:53:40.858Z</lastmod>
+    <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/Nearshore-Datachecks.html</loc>
+    <lastmod>2023-03-01T19:53:35.615Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/rendering.html</loc>
-    <lastmod>2023-02-23T12:53:41.390Z</lastmod>
+    <lastmod>2023-03-01T19:53:36.094Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/rmarkdown.html</loc>
-    <lastmod>2023-02-23T12:53:43.182Z</lastmod>
+    <lastmod>2023-03-01T19:53:37.803Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/content/Watershed.html</loc>
-    <lastmod>2023-02-23T12:53:44.893Z</lastmod>
+    <lastmod>2023-03-01T19:53:39.303Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/History.html</loc>
+    <lastmod>2023-03-01T19:53:39.880Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/index - Copy.html</loc>
-    <lastmod>2023-02-23T12:53:45.320Z</lastmod>
+    <lastmod>2023-03-01T19:53:40.302Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/index.html</loc>
-    <lastmod>2023-02-23T12:53:45.828Z</lastmod>
+    <lastmod>2023-03-01T19:53:40.753Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/Nearshore Datachecks.html</loc>
+    <lastmod>2023-03-01T19:53:45.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/Nearshore-Datachecks.html</loc>
+    <lastmod>2023-03-01T19:53:50.262Z</lastmod>
   </url>
   <url>
     <loc>https://mikewessel.github.io/NOAA-Culebra-LBSP/Watershed.html</loc>
-    <lastmod>2023-02-23T12:53:47.707Z</lastmod>
+    <lastmod>2023-03-01T19:53:52.077Z</lastmod>
   </url>
 </urlset>

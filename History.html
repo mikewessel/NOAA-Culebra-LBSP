@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mike Wessel">
-<meta name="dcterms.date" content="2023-02-09">
 
-<title>NOAA quarto simple - Watershed WQ Data Entry</title>
+<title>NOAA quarto simple – history</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Watershed WQ Data Entry</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -125,68 +123,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#watershed-water-quality-data-entry-site" id="toc-watershed-water-quality-data-entry-site" class="nav-link active" data-scroll-target="#watershed-water-quality-data-entry-site">Watershed Water Quality Data Entry Site</a></li>
-  <li><a href="#watershed-field-data-entry" id="toc-watershed-field-data-entry" class="nav-link" data-scroll-target="#watershed-field-data-entry">Watershed Field Data Entry</a></li>
-  <li><a href="#watershed-field-spreadsheet" id="toc-watershed-field-spreadsheet" class="nav-link" data-scroll-target="#watershed-field-spreadsheet">Watershed Field spreadsheet</a></li>
-  <li><a href="#watershed-lab-nutrients-data-entry" id="toc-watershed-lab-nutrients-data-entry" class="nav-link" data-scroll-target="#watershed-lab-nutrients-data-entry">Watershed Lab Nutrients Data Entry</a></li>
-  <li><a href="#watershed-lab-spreadsheet" id="toc-watershed-lab-spreadsheet" class="nav-link" data-scroll-target="#watershed-lab-spreadsheet">Watershed Lab spreadsheet</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/Watershed.Rmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/Watershed.Rmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">Watershed WQ Data Entry</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mike Wessel </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 9, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="watershed-water-quality-data-entry-site" class="level2">
-<h2 class="anchored" data-anchor-id="watershed-water-quality-data-entry-site">Watershed Water Quality Data Entry Site</h2>
-<p>Use the link below “Data Entry” to access the google form for water quality data entry</p>
-</section>
-<section id="watershed-field-data-entry" class="level1">
-<h1><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_OZD57TyKdJhqbIYvi8owVfwe2P09yocx4B2YqNqlafj1QA/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0&amp;dods" target="_blank">Watershed Field Data Entry</a></h1>
-</section>
-<section id="watershed-field-spreadsheet" class="level1">
-<h1><a href="https://docs.google.com/spreadsheets/d/1QA9c1yXKe87fepSy2IrKXdG5lwptLW3lu7fKk-ahDsc/edit#gid=522005438" target="_blank">Watershed Field spreadsheet</a></h1>
-</section>
-<section id="watershed-lab-nutrients-data-entry" class="level1">
-<h1><a href="https://docs.google.com/forms/d/e/1FAIpQLSfU6vzEwfefXiNVEUIwBsv9iPQvvvZqM_nR9F6XGLkwxhT_og/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0&amp;dods" target="_blank">Watershed Lab Nutrients Data Entry</a></h1>
-</section>
-<section id="watershed-lab-spreadsheet" class="level1">
-<h1><a href="https://docs.google.com/spreadsheets/d/1qWWiaY-w2_Z-NJINq-mnOCpXk_fTmuQxA0sgXArYbgg/edit#gid=1639430567" target="_blank">Watershed Lab spreadsheet</a></h1>
+<p>doit&lt;-data.frame(read_sheet(“https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing”)) is.data.frame(doit) names(doit) rename(doit,Surface_Lower_irrandiance=Surface…Lower.Apogee.sensor..Channel.B.) doit2&lt;-doit%&gt;% rename(Surface_Lower_irrandiance=Surface…Lower.Apogee.sensor..Channel.B., Surface_Upper_irrandiance=Surface..Upper.Apogee.sensor..Channel.A., Bottom_Upper_irrandiance =Bottom..Upper.Apogee..Channel.A., Bottom_Lower_irrandiance =Bottom…Lower.Apogee..Channel.B.)%&gt;% mutate(Normalized_KdPAR=abs(log((Surface_Lower_irrandiance/Surface_Upper_irrandiance)/(Bottom_Lower_irrandiance/Bottom_Upper_irrandiance)))) #counts ggplot(doit2, aes(Site.ID)) + geom_bar() #values ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR)) #| label: fig-airquality #| fig-cap: Temperature and ozone level. #| warning: false #| echo: false library(googlesheets4) library(googledrive) library(ggplot2) library(dplyr) doit&lt;-data.frame(read_sheet(“https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing”)) is.data.frame(doit) names(doit) doit2&lt;-doit%&gt;% rename(Surface_Lower_irrandiance=Surface…Lower.Apogee.sensor..Channel.B., Surface_Upper_irrandiance=Surface..Upper.Apogee.sensor..Channel.A., Bottom_Upper_irrandiance =Bottom..Upper.Apogee..Channel.A., Bottom_Lower_irrandiance =Bottom…Lower.Apogee..Channel.B.)%&gt;% mutate(Normalized_KdPAR=abs(log((Surface_Lower_irrandiance/Surface_Upper_irrandiance)/(Bottom_Lower_irrandiance/Bottom_Upper_irrandiance)))) #counts ggplot(doit2, aes(Site.ID)) + geom_bar() ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(name = “Turbidity”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~.*10, name = “Turbidity”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./.10, name = “Turbidity”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))) View(doit2) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + # scale_y_continuous(sec.axis = sec_axis(~./.10, name = “Turbidity”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID, y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Turbidity”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom.Turbidity..NTU.”)+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID)) + geom_bar()+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “response2”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./5, name = “response2”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./5, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“black”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“black”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR)) Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“black”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“black”) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“black”) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID), y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID),y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=as.numeric(Site.ID),y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR),stat = “identity” )+ geom_line(aes(x=as.numeric(Site.ID),y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_line(aes(x=as.numeric(Site.ID),y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./2, name = “Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+ ylab(“Normalized KdPAR) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=”red”,group = 1 ) + Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + ylab(“Normalized KdPAR”) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+ Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+ Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ ylab(“Normalized KdPAR”) + geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd library(googlesheets4) library(googledrive) library(ggplot2) library(dplyr) doit&lt;-data.frame(read_sheet(“https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing”)) is.data.frame(doit) #names(doit) doit2&lt;-doit%&gt;% rename(Surface_Lower_irrandiance=Surface…Lower.Apogee.sensor..Channel.B., Surface_Upper_irrandiance=Surface..Upper.Apogee.sensor..Channel.A., Bottom_Upper_irrandiance =Bottom..Upper.Apogee..Channel.A., Bottom_Lower_irrandiance =Bottom…Lower.Apogee..Channel.B.)%&gt;% mutate(Normalized_KdPAR=abs(log((Surface_Lower_irrandiance/Surface_Upper_irrandiance)/(Bottom_Lower_irrandiance/Bottom_Upper_irrandiance)))) Kd&lt;-ggplot(doit2, aes(Site.ID))+ geom_bar(aes(weight = Normalized_KdPAR))+ ylab(“Normalized KdPAR”) + geom_line(aes(x=Site.ID,y=Bottom.Turbidity..NTU.),size = 1.5, color=“red”,group = 1 ) + scale_y_continuous(sec.axis = sec_axis(~./1, name = “Bottom Turbidity”)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) Kd ggplot(doit2, aes(Site.ID)) + geom_bar()+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) ggplot(doit2, aes(Site.ID)) + geom_bar()+ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) savehistory(“C:/Wessel/Git_projects/NOAA-Culebra-LBSP/History.qmd”)</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
