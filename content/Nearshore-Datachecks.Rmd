@@ -1,0 +1,119 @@
+---
+title: "Nearshore_Datachecks"
+author: "Mwessel"
+date: "2023-03-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+rm(list = ls())  
+
+
+```{r mani}
+#| warning: false
+#| echo: false
+#| message: false
+
+
+library(googlesheets4)
+library(googledrive)
+library(ggplot2)
+library(dplyr)
+library(psych)
+library(tidyverse)
+library(rlang)
+library(knitr)
+
+# read in googlesheet
+doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
+is.data.frame(doit)
+names(doit)
+
+#rename variables and calculate KdPar
+doit2<-doit%>%
+rename(
+ Surf.Lower.Apogee =Surface...Lower.Apogee.sensor..Channel.B.,
+ Surf.Upper.Apogee =Surface..Upper.Apogee.sensor..Channel.A.,
+ Bot.Upper.Apogee  =Bottom..Upper.Apogee..Channel.A.,
+ Bot.Lower.Apogee  =Bottom...Lower.Apogee..Channel.B.,
+ Cloud.Cover = Cloud.Cover.....0...100,
+ Surf.Temp   = Surface.Temperature..C.,
+ Surf.Sal    = Surface.Salinity..PSU.,
+ Surf.DO     = Surface.DO..mg.L.,
+ Surf.Turb   = Surface.Turbidity..NTU.,
+ Surf.Chl.red= Surface.Chl.red.Fluorescence..µg.L.,
+ Bot.DO.sat  = Bottom.DO....saturation.,
+ Bot.pH      = Bottom.pH,
+ Bot.Chla    = Bottom.Chl.a..Fluorescence..µg.L.,
+ Bot.CDOM   = Bottom.CDOM..ppb.,
+ Date        = Date.of.Monitoring,
+ Data.Entered.By= Data.entered.by.,
+ Surf.Time   = Surface.Sample.Time,
+ Bot.Time    = Bottom.Sample.Time,
+ Surf.DO.Sat = Surface.DO....saturation.,
+ Surf.pH     = Surface.pH,
+ Surf.Chla   = Surface.Chl.a.Fluorescence..µg.L.,
+ Surf.CDOM   = Surface.CDOM..ppb.,
+ Bot.Temp    = Bottom.Temperature..C.,
+ Bot.Sal     = Bottom.Salinity..PSU.,
+ Bot.DO      = Bottom.DO..mg.L.,
+ Bot.Turb    = Bottom.Turbidity..NTU.,
+ Bot.Chl.red = Bottom.Chl.red.Fluorescence..µg.L.,
+ Notes =  Notes..if.applicable.
+# Bot.Cond    = Bottom.Conductivity..μS.cm., these two dont want to work
+# Surf.Cond   = Surface.Conductivity..uS.cm.,
+  ) %>%
+mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee)))) 
+```
+
+Create Simple Summary Tables 
+```{r summit}
+#| warning: false
+
+#for some reason the names are a list even though its a dataframe so you have to unlist it;
+df2 <- as.data.frame(lapply(doit2, unlist))
+
+# amke a table
+sumvars <- df2 %>%
+   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,Surf.Time, 
+          Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,  
+          Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.Time,Bot.DO.sat, 
+          Bot.pH,Bot.Chla,Bot.CDOM)%>%
+     describe(quant=c(.25,.75)) %>%
+    as_tibble(rownames="Site")  %>%
+   select(Site,n,mean, sd,min,median,max)%>%
+    print()
+
+```
+
+
+Do Some Plots
+
+## PAr Figure
+
+@fig-Light Light Attenuation by Site with Bottom Turbidity line overlay.
+
+```{r plotit}
+#| label: fig-Light
+#| fig-cap: Sample Counts.
+#| warning: false
+
+#values - not drawing line
+Kd<-ggplot(doit2, aes(Site.ID))+
+geom_bar(aes(weight = Normalized_KdPAR))+
+ylab("Normalized KdPAR") +
+geom_line(aes(x=Site.ID,y=Bot.Turb),size = 1.5, color="red",group = 1 ) +
+scale_y_continuous(sec.axis = sec_axis(~./1, name = "Bottom Turbidity")) +
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+Kd
+
+```
+
+
+
+
+
+
+

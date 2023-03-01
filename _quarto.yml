@@ -37,7 +37,8 @@ website:
         text: Nearshore Data Entry
       - href: content/Watershed.Rmd
         text: Watershed Data Entry
-
+      - href: content/Nearshore-Datachecks.Rmd
+        text: Nearshore Data Checks
 
 format:
   html:
