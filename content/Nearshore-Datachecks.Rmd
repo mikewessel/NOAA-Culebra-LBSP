@@ -7,8 +7,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+#rm(list = ls())  
 ```
-rm(list = ls())  
+
 
 
 ```{r mani}
@@ -28,8 +30,8 @@ library(knitr)
 
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
-is.data.frame(doit)
-names(doit)
+#is.data.frame(doit)
+#names(doit)
 
 #rename variables and calculate KdPar
 doit2<-doit%>%
@@ -68,7 +70,7 @@ rename(
 mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee)))) 
 ```
 
-Create Simple Summary Tables 
+A Simple Descriptive Summary Table 
 ```{r summit}
 #| warning: false
 
@@ -91,7 +93,7 @@ sumvars <- df2 %>%
 
 Do Some Plots
 
-## PAr Figure
+## Par Figure
 
 @fig-Light Light Attenuation by Site with Bottom Turbidity line overlay.
 
