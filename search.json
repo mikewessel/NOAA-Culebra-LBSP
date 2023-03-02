@@ -67,14 +67,14 @@
     "href": "content/Nearshore-Datachecks.html",
     "title": "Nearshore_Datachecks",
     "section": "",
-    "text": "rm(list = ls())\nCreate Simple Summary Tables\nDo Some Plots"
+    "text": "A Simple Descriptive Summary Table\nDo Some Plots"
   },
   {
     "objectID": "content/Nearshore-Datachecks.html#par-figure",
     "href": "content/Nearshore-Datachecks.html#par-figure",
     "title": "Nearshore_Datachecks",
-    "section": "PAr Figure",
-    "text": "PAr Figure\nFigure 1 Light Attenuation by Site with Bottom Turbidity line overlay.\n\n\n\n\n\nFigure 1: Sample Counts."
+    "section": "Par Figure",
+    "text": "Par Figure\nFigure 1 Light Attenuation by Site with Bottom Turbidity line overlay.\n\n\n\n\n\nFigure 1: Sample Counts."
   },
   {
     "objectID": "content/rendering.html",
