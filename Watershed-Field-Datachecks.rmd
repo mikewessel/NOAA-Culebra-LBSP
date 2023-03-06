@@ -1,5 +1,5 @@
 ---
-title: "Watershed Field Datachecks"
+title: "Watershed_FieldDatachecks"
 author: "Mwessel"
 date: "2023-03-01"
 output: html_document
@@ -104,7 +104,7 @@ Do Some Plots
 
 ## Chla Plot
 
-@fig-Chlorophyll Chlorophyll by site with Red Excitation line overlay.
+ Chlorophyll by site with Red Excitation line overlay.
 
 
 ```{r plotit}
