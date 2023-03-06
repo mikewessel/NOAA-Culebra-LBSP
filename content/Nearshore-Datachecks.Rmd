@@ -102,7 +102,8 @@ sumvars <- df2 %>%
      describe(quant=c(.25,.75)) %>%
     as_tibble(rownames="Site")  %>%
    select(Site,n,mean, sd,min,median,max)%>%
-    kbl(digits=3,caption = paste0(labelit))
+    kbl(digits=3,caption = paste0(labelit))%>%
+   kable_styling()
 sumvars
 
 ```
