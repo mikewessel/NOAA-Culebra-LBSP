@@ -32,7 +32,7 @@ library(lubridate)
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
 #is.data.frame(doit)
-names(doit)
+#names(doit)
 
 
 #rename variables and calculate KdPar
