@@ -229,19 +229,5 @@
     "title": "Watershed WQ Data Entry",
     "section": "",
     "text": "Use the link below “Data Entry” to access the google form for water quality data entry"
-  },
-  {
-    "objectID": "watershed_fld.html",
-    "href": "watershed_fld.html",
-    "title": "watershed_fld",
-    "section": "",
-    "text": "Create Simple Summary Tables\nDo Some Plots"
-  },
-  {
-    "objectID": "watershed_fld.html#chla-plot",
-    "href": "watershed_fld.html#chla-plot",
-    "title": "watershed_fld",
-    "section": "Chla Plot",
-    "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay."
   }
 ]
