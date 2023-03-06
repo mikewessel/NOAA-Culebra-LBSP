@@ -1,0 +1,128 @@
+---
+title: "Watershed_Fieldchecks"
+author: "Mwessel"
+date: "2023-03-01"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r mani}
+
+library(googlesheets4)
+library(googledrive)
+library(ggplot2)
+library(dplyr)
+library(psych)
+library(tidyverse)
+library(rlang)
+library(knitr)
+library(lubridate)
+
+# read in googlesheet
+doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1QA9c1yXKe87fepSy2IrKXdG5lwptLW3lu7fKk-ahDsc/edit?usp=sharing"))
+
+
+#s.data.frame(doit)
+#names(doit)
+
+#rename variables and calculate KdPar
+
+doit2<-doit%>%
+rename(
+Date = Date.of.Monitoring             ,
+Date.Time = Sample.Time                    , 
+Collected.by =Samples.collected.by.   , 
+Entered.by =Data.entered.by.          , 
+Site.ID = Sample.ID                   , 
+Temp.c = Temperature...C.             , 
+#Conductivity = Conductivity..µS.cm.   , 
+DO.mgl = DO..mg.l                     , 
+DO.sat = DO....Saturation.            , 
+Chla.blue = Chl.a..blue..ug.l.        , 
+CDOM = CDOM..ppb.                     , 
+Chla.red = Chla.Red..ug.l.            , 
+Turb.ntu = Turbidity..NTU.            , 
+Sal.psu = Salinity..PSU.              , 
+NH3_field = Ammonia..mg.l..Field      , 
+Chla.phor = Chlorophyll.aquaphor..ug.l.,
+Optical.Brightness = Optical.Brightness,
+Notes = Notes.                        , 
+Salinty.hand = Salinity..handheld.    , 
+Turb.hach = Turbidity..hach.            
+  )%>%
+mutate(Hr=hour(Date.Time),Hour=hour(Date.Time),Minute=minute(Date.Time),Month=month(Date),Year=year(Date))%>%
+unite(Time, Hr,Minute, sep = ":")  
+
+# only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
+doit2<-doit2%>%
+ mutate(mxmn=max(Month),mxyr=max(Year))%>%
+  filter(Year==mxyr & Month==mxmn)
+
+```
+
+
+
+
+Create Simple Summary Tables
+
+
+```{r summit}
+
+#| warning: false
+#for some reason the names are a list even though its a dataframe so you have to unlist it;
+df2 <- as.data.frame(lapply(doit2, unlist))
+ 
+ 
+
+# Make a table
+
+sumvars <- df2 %>%
+   select(
+     Site.ID,Temp.c, DO.mgl,DO.sat,Chla.blue,CDOM,Chla.red, Turb.ntu, Sal.psu,NH3_field, Chla.phor,
+    Optical.Brightness,Hour)%>%
+     describe(quant=c(.25,.75),na.rm =TRUE) %>%
+    as_tibble(rownames="Site")
+
+
+
+printit<-sumvars%>%
+  select(Site,n,mean,sd,min,median,max)%>%
+   print()
+
+```
+
+
+
+Do Some Plots
+
+## Chla Plot
+
+ Chlorophyll by site with Red Excitation line overlay.
+
+
+```{r plotit}
+
+#values - not drawing line
+
+Kd<-ggplot(doit2, aes(Site.ID))+
+geom_bar(aes(weight = Chla.blue),fill="blue")+
+ylab("Chlorophyll Blue Excitation") +
+geom_line(aes(x=Site.ID,y=Chla.red),size = 1.5, color="red",group = 1 ) +
+scale_y_continuous(sec.axis = sec_axis(~./1, name = "Chlorophyll Red Excitation")) +
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+      axis.title.y.left = element_text(colour = "blue"),
+      axis.title.y.right = element_text(colour = "red"),
+      )
+Kd
+
+
+```
+
+
