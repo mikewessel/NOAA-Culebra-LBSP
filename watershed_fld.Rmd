@@ -64,7 +64,7 @@ unite(Time, Hr,Minute, sep = ":")
 doit2<-doit2%>%
  mutate(mxmn=max(Month),mxyr=max(Year))%>%
   filter(Year==mxyr & Month==mxmn)
-
+labelit<-paste(max(doit2$Year),"-",max(doit2$Month))
 ```
 
 
@@ -88,14 +88,12 @@ sumvars <- df2 %>%
      Site.ID,Temp.c, DO.mgl,DO.sat,Chla.blue,CDOM,Chla.red, Turb.ntu, Sal.psu,NH3_field, Chla.phor,
     Optical.Brightness,Hour)%>%
      describe(quant=c(.25,.75),na.rm =TRUE) %>%
-    as_tibble(rownames="Site")
+    as_tibble(rownames="Site")%>%
+  select(Site,n,mean,sd,min,median,max)%>%
+  kbl(digits=3,caption = paste0(labelit))
+sumvars
 
 
-
-printit<-sumvars%>%
-  select(Site,n,mean,sd,min,median,max)
-
-kable(printit)
 ```
 
 
