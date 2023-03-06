@@ -39,9 +39,9 @@ website:
         text: Watershed Data Entry
       - href: content/Nearshore-Datachecks.Rmd
         text: Data Checks - Nearshore Field
-      - href: content/Watershed-Field-Datachecks.Rmd
+      - href: Watershed-Field-Datachecks.Rmd
         text: Data Checks - Watershed Field
-      - href: content/Watershed-Nuts-Datachecks.Rmd
+      - href: Watershed-Nuts-Datachecks.Rmd
         text: Data Checks - Watershed Lab
 
 format:
