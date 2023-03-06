@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-#rm(list = ls())  
+#rm(list = ls())
 ```
 
 
@@ -66,7 +66,7 @@ rename(
  Bot.Turb    = Bottom.Turbidity..NTU.,
  Bot.Chl.red = Bottom.Chl.red.Fluorescence..µg.L.,
  Notes =  Notes..if.applicable.,
- Entero = Enterococci.MPN.100ml..be.sure.to.convert.  
+ Entero = Enterococci.MPN.100ml..be.sure.to.convert.
 # Bot.Cond    = Bottom.Conductivity..μS.cm., these two dont want to work
 # Surf.Cond   = Surface.Conductivity..uS.cm.,
   ) %>%
@@ -78,7 +78,7 @@ doit2<-doit2%>%
 
 ```
 
-A Simple Descriptive Summary Table 
+A Simple Descriptive Summary Table
 ```{r summit}
 #| warning: false
 
@@ -87,14 +87,15 @@ df2 <- as.data.frame(lapply(doit2, unlist))
 
 # amke a table
 sumvars <- df2 %>%
-   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,Surf.Time, 
-          Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,  
-          Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.Time,Bot.DO.sat, 
+   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,Surf.Time,
+          Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,
+          Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.Time,Bot.DO.sat,
           Bot.pH,Bot.Chla,Bot.CDOM)%>%
      describe(quant=c(.25,.75)) %>%
     as_tibble(rownames="Site")  %>%
-   select(Site,n,mean, sd,min,median,max)%>%
-    print()
+   select(Site,n,mean, sd,min,median,max)
+
+kable(sumvars)
 
 ```
 
