@@ -27,11 +27,13 @@ library(psych)
 library(tidyverse)
 library(rlang)
 library(knitr)
+library(lubridate)
 
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
 #is.data.frame(doit)
-#names(doit)
+names(doit)
+
 
 #rename variables and calculate KdPar
 doit2<-doit%>%
@@ -63,11 +65,17 @@ rename(
  Bot.DO      = Bottom.DO..mg.L.,
  Bot.Turb    = Bottom.Turbidity..NTU.,
  Bot.Chl.red = Bottom.Chl.red.Fluorescence..µg.L.,
- Notes =  Notes..if.applicable.
+ Notes =  Notes..if.applicable.,
+ Entero = Enterococci.MPN.100ml..be.sure.to.convert.  
 # Bot.Cond    = Bottom.Conductivity..μS.cm., these two dont want to work
 # Surf.Cond   = Surface.Conductivity..uS.cm.,
   ) %>%
-mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee)))) 
+mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee))))
+
+doit2<-doit2%>%
+  mutate(hour=hour(Time),minute=minute(Time))%>%
+  unite(tim, hour,minute, sep = ":")
+
 ```
 
 A Simple Descriptive Summary Table 
