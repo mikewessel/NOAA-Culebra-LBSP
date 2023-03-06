@@ -73,7 +73,7 @@ rename(
 mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee))))
 
 doit2<-doit2%>%
-  mutate(hour=hour(Time),minute=minute(Time))%>%
+  mutate(hour=hour(Time),minute=minute(Time),Month=month(Date),Year=year(Date))%>%
   unite(tim, hour,minute, sep = ":")
 
 # only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
