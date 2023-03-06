@@ -23,6 +23,7 @@ library(tidyverse)
 library(rlang)
 library(knitr)
 library(lubridate)
+library(knitr)
 
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1QA9c1yXKe87fepSy2IrKXdG5lwptLW3lu7fKk-ahDsc/edit?usp=sharing"))
@@ -92,9 +93,9 @@ sumvars <- df2 %>%
 
 
 printit<-sumvars%>%
-  select(Site,n,mean,sd,min,median,max)%>%
-   print()
+  select(Site,n,mean,sd,min,median,max)
 
+kable(printit)
 ```
 
 
