@@ -76,6 +76,12 @@ doit2<-doit2%>%
   mutate(hour=hour(Time),minute=minute(Time))%>%
   unite(tim, hour,minute, sep = ":")
 
+# only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
+doit2<-doit2%>%
+ mutate(mxmn=max(Month),mxyr=max(Year))%>%
+  filter(Year==mxyr & Month==mxmn)
+
+
 ```
 
 A Simple Descriptive Summary Table
