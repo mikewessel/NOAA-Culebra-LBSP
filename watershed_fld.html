@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mwessel">
+<meta name="dcterms.date" content="2023-03-06">
 
-<title>NOAA quarto simple - Culebra LBSP</title>
+<title>NOAA quarto simple - Watershed_fld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./content/Near.html" rel="next">
 <link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Culebra LBSP</h1>
+      <h1 class="quarto-secondary-nav-title">Watershed_fld</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -79,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
@@ -101,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Data Entry Portal</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Data Entry Portal</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -138,24 +139,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#chla-plot" id="toc-chla-plot" class="nav-link active" data-scroll-target="#chla-plot">Chla Plot</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/index.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/watershed_fld.Rmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/watershed_fld.Rmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Culebra LBSP</h1>
-<p class="subtitle lead">Data entry portal for water quality sampling</p>
+<h1 class="title d-none d-lg-block">Watershed_fld</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mwessel </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 6, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -163,19 +175,129 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This site provides links and instructions for using Google Forms to enter water quality data for both the “Nearshore” and “Watershed” components of NOAA’s Ridge to Reef monitoring program in Culebra, Puerto Rico.</p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ul>
-<li>Step 1: Print datasheets for sampling each month. The file in the link provided at the end of this paragraph contains datasheets for both the sonde measurements as well and the laboratory nutrients and bacteriological sampling.</li>
-</ul>
-<p>There are 8 sites in the Watershed sampling components that are to be sampled monthly so print 8 copies of the datasheets using the following link <a href="https://docs.google.com/document/d/17oZ_msC6d49UCro2x92w2r4P4DCnu0YX/edit">Watershed Datasheets</a></p>
-<p>There are 13 sites in the Nearshore sampling components that are to be sampled monthly so print 13 copies of the datasheets using the following link <a href="https://docs.google.com/document/d/1blpa4Iob9zMFprBdBVjw-C5EYTtMRYO7/edit">Nearshore Datasheets</a></p>
-<ul>
-<li><p>Step 2: Collect samples and record information on datasheets. Be sure to have a cooler with ice and place all water samples (both nutrients and bacterial samples) on ice. Write site name (or abbreviation), date and time on collected water samples. Eureka Sonde samples should be measured in the watercourse if possible, and if not, in a large plastic bucket. Be sure to rinse equipment after each sample with DI water. Consult workplans in the following folder for more detailed instructions on sample collection <a href="https://drive.google.com/drive/u/1/folders/1Jfijtywj3ZfLIrinoLc9D4M8A9y6mx2z">Work Plans</a></p></li>
-<li><p>Step 3: Process Nutrient and Bacteriological samples</p></li>
-<li><p>Step 4: Enter data using this data entry portal. The tabs on the left contain links to Google Forms that should be used for entering data. Do not use the spreadsheets to enter data, use the Google Forms. The spreadsheet links should be used only to check that the data are entered correctly and to correct any errors.</p></li>
-</ul>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'googledrive'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:googlesheets4':
+
+    request_generate, request_make</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'psych'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:ggplot2':
+
+    %+%, alpha</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ tibble  3.1.8     ✔ purrr   1.0.1
+✔ tidyr   1.3.0     ✔ stringr 1.5.0
+✔ readr   2.1.4     ✔ forcats 1.0.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ psych::%+%()                    masks ggplot2::%+%()
+✖ psych::alpha()                  masks ggplot2::alpha()
+✖ dplyr::filter()                 masks stats::filter()
+✖ dplyr::lag()                    masks stats::lag()
+✖ googledrive::request_generate() masks googlesheets4::request_generate()
+✖ googledrive::request_make()     masks googlesheets4::request_make()
+
+Attaching package: 'rlang'
+
+
+The following objects are masked from 'package:purrr':
+
+    %@%, flatten, flatten_chr, flatten_dbl, flatten_int, flatten_lgl,
+    flatten_raw, invoke, splice
+
+
+
+Attaching package: 'lubridate'
+
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+ℹ Suitable tokens found in the cache, associated with these emails:
+
+• 'inferential.consulting@gmail.com'
+
+• 'wesselouki@gmail.com'
+
+  Defaulting to the first email.
+
+! Using an auto-discovered, cached token.
+
+  To suppress this message, modify your code or options to clearly consent to
+  the use of a cached token.
+
+  See gargle's "Non-interactive auth" vignette for more details:
+
+  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;
+
+ℹ The googlesheets4 package is using a cached token for
+  'inferential.consulting@gmail.com'.
+
+✔ Reading from "Final Cabra WQ Monitoring field spreadsheet".
+
+✔ Range 'Form Responses 4'.</code></pre>
+</div>
+</div>
+<p>Create Simple Summary Tables</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13 × 7
+   Site                   n     mean       sd    min median    max
+   &lt;chr&gt;              &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Site.ID*               7   4        2.16     1      4      7   
+ 2 Temp.c                 7  26.9      1.13    25.2   27.4   28.2 
+ 3 DO.mgl                 7   8.46     1.34     6.98   8.1   11.0 
+ 4 DO.sat                 7 110.      19.2     87.1  104.   145.  
+ 5 Chla.blue              7  31.2     37.6      3.95   7.4  102.  
+ 6 CDOM                   7  95.5     97.2      9.64  76.4  308.  
+ 7 Chla.red               7 141.       0.630  140.   141.   141.  
+ 8 Turb.ntu               7   6.95     7.25     0.21   3.6   21.8 
+ 9 Sal.psu                7   1.14     1.04     0.36   0.42   2.6 
+10 NH3_field              7   0.0843   0.0892   0      0.09   0.23
+11 Chla.phor              4 264.     281.     100.   137.   683   
+12 Optical.Brightness     7  23.1      9.60    14     20.8   40.9 
+13 Hour                   7  12.3      5.59     0     15     16   </code></pre>
+</div>
+</div>
+<p>Do Some Plots</p>
+<section id="chla-plot" class="level2">
+<h2 class="anchored" data-anchor-id="chla-plot">Chla Plot</h2>
+<p>Chlorophyll by site with Red Excitation line overlay.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="watershed_fld_files/figure-html/plotit-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>
@@ -429,15 +551,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./content/Near.html" class="pagination-link">
-        <span class="nav-page-text">Nearshore Data Entry</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
