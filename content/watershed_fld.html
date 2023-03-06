@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mwessel">
-<meta name="dcterms.date" content="2023-03-01">
+<meta name="dcterms.date" content="2023-03-06">
 
-<title>NOAA quarto simple - Nearshore_Datachecks</title>
+<title>NOAA quarto simple - watershed_fld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../content/Watershed-Nuts-Datachecks.Rmd" rel="next">
+<link href="../content/Nearshore-Datachecks.html" rel="prev">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Nearshore_Datachecks</h1>
+      <h1 class="quarto-secondary-nav-title">watershed_fld</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -84,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
@@ -102,32 +104,32 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Data Entry Portal</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Data Entry Portal</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Near.html" class="sidebar-item-text sidebar-link">Nearshore Data Entry</a>
+  <a href="../content/Near.html" class="sidebar-item-text sidebar-link">Nearshore Data Entry</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Watershed.html" class="sidebar-item-text sidebar-link">Watershed Data Entry</a>
+  <a href="../content/Watershed.html" class="sidebar-item-text sidebar-link">Watershed Data Entry</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Nearshore-Datachecks.html" class="sidebar-item-text sidebar-link">Data Checks - Nearshore Field</a>
+  <a href="../content/Nearshore-Datachecks.html" class="sidebar-item-text sidebar-link">Data Checks - Nearshore Field</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/watershed_fld.html" class="sidebar-item-text sidebar-link">Data Checks - Watershed Field</a>
+  <a href="../content/watershed_fld.html" class="sidebar-item-text sidebar-link active">Data Checks - Watershed Field</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Watershed-Nuts-Datachecks.Rmd" class="sidebar-item-text sidebar-link">Data Checks - Watershed Lab</a>
+  <a href="../content/Watershed-Nuts-Datachecks.Rmd" class="sidebar-item-text sidebar-link">Data Checks - Watershed Lab</a>
   </div>
 </li>
     </ul>
@@ -139,16 +141,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#par-figure" id="toc-par-figure" class="nav-link active" data-scroll-target="#par-figure">Par Figure</a></li>
+  <li><a href="#chla-plot" id="toc-chla-plot" class="nav-link active" data-scroll-target="#chla-plot">Chla Plot</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/Nearshore-Datachecks.rmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/Nearshore-Datachecks.rmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/edit/main/content/watershed_fld.Rmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/blob/main/content/watershed_fld.Rmd" class="toc-action">View source</a></p><p><a href="https://github.com/mikewessel/NOAA-Culebra-LBSP/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Nearshore_Datachecks</h1>
+<h1 class="title d-none d-lg-block">watershed_fld</h1>
 </div>
 
 
@@ -165,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 1, 2023</p>
+      <p class="date">March 6, 2023</p>
     </div>
   </div>
   
@@ -181,37 +183,31 @@ ul.task-list li input[type="checkbox"] {
 <p>Create Simple Summary Tables</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 19 × 7
-   Site             n    mean     sd   min median    max
-   &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
- 1 Surf.Sal        13  38.4   0.207  38.0   38.4   38.9 
- 2 Surf.DO         13   6.55  0.212   6.23   6.52   6.98
- 3 Surf.Turb       13   0.886 0.499   0.31   0.79   1.96
- 4 Surf.Chl.red    13   0.856 0.301   0.11   0.93   1.3 
- 5 Surf.Time*      13   7     3.89    1      7     13   
- 6 Surf.DO.Sat     13 104.    3.69   97.8  103.   111   
- 7 Surf.pH         13   8.21  0.0340  8.14   8.22   8.29
- 8 Surf.Chla       13   0.153 0.120   0.01   0.12   0.4 
- 9 Surf.CDOM       13   1.47  0.836   0.63   1.15   3.4 
-10 Bot.Temp        13  26.2   0.305  25.8   26.0   26.9 
-11 Bot.Sal         13  38.4   0.199  38.0   38.4   38.9 
-12 Bot.DO          13   6.63  0.325   6.09   6.68   7.1 
-13 Bot.Turb        13   0.864 0.373   0.36   0.72   1.85
-14 Bot.Chl.red     13   0.892 0.169   0.55   0.87   1.18
-15 Bot.Time*       13   7     3.89    1      7     13   
-16 Bot.DO.sat      13 105.    5.52   95.6  105    112.  
-17 Bot.pH          13   8.22  0.0183  8.19   8.22   8.25
-18 Bot.Chla        13   0.145 0.140  -0.02   0.11   0.51
-19 Bot.CDOM        13   1.27  0.427   0.65   1.22   1.85</code></pre>
+<pre><code># A tibble: 13 × 7
+   Site                   n     mean       sd    min median    max
+   &lt;chr&gt;              &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Site.ID*               7   4        2.16     1      4      7   
+ 2 Temp.c                 7  26.9      1.13    25.2   27.4   28.2 
+ 3 DO.mgl                 7   8.46     1.34     6.98   8.1   11.0 
+ 4 DO.sat                 7 110.      19.2     87.1  104.   145.  
+ 5 Chla.blue              7  31.2     37.6      3.95   7.4  102.  
+ 6 CDOM                   7  95.5     97.2      9.64  76.4  308.  
+ 7 Chla.red               7 141.       0.630  140.   141.   141.  
+ 8 Turb.ntu               7   6.95     7.25     0.21   3.6   21.8 
+ 9 Sal.psu                7   1.14     1.04     0.36   0.42   2.6 
+10 NH3_field              7   0.0843   0.0892   0      0.09   0.23
+11 Chla.phor              4 264.     281.     100.   137.   683   
+12 Optical.Brightness     7  23.1      9.60    14     20.8   40.9 
+13 Hour                   7  12.3      5.59     0     15     16   </code></pre>
 </div>
 </div>
 <p>Do Some Plots</p>
-<section id="par-figure" class="level2">
-<h2 class="anchored" data-anchor-id="par-figure">Par Figure</h2>
-<p><strong>?@fig-Light</strong> Light Attenuation by Site with Bottom Turbidity line overlay.</p>
+<section id="chla-plot" class="level2">
+<h2 class="anchored" data-anchor-id="chla-plot">Chla Plot</h2>
+<p>Chlorophyll by site with Red Excitation line overlay.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="Nearshore-Datachecks_files/figure-html/plotit-1.png" class="img-fluid" width="672"></p>
+<p><img src="watershed_fld_files/figure-html/plotit-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
@@ -467,6 +463,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../content/Nearshore-Datachecks.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Checks - Nearshore Field</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../content/Watershed-Nuts-Datachecks.Rmd" class="pagination-link">
+        <span class="nav-page-text">Data Checks - Watershed Lab</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

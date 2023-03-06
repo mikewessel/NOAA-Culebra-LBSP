@@ -133,6 +133,20 @@
     "text": "Use the link below “Data Entry” to access the google form for water quality data entry"
   },
   {
+    "objectID": "content/watershed_fld.html",
+    "href": "content/watershed_fld.html",
+    "title": "watershed_fld",
+    "section": "",
+    "text": "Create Simple Summary Tables\nDo Some Plots"
+  },
+  {
+    "objectID": "content/watershed_fld.html#chla-plot",
+    "href": "content/watershed_fld.html#chla-plot",
+    "title": "watershed_fld",
+    "section": "Chla Plot",
+    "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay."
+  },
+  {
     "objectID": "History.html",
     "href": "History.html",
     "title": "NOAA quarto simple",
