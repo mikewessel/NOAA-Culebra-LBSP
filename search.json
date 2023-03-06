@@ -67,7 +67,7 @@
     "href": "content/Nearshore-Datachecks.html",
     "title": "Nearshore_Datachecks",
     "section": "",
-    "text": "A Simple Descriptive Summary Table\nDo Some Plots"
+    "text": "[1] \"Timestamp\"                                    \n [2] \"Date.of.Monitoring\"                           \n [3] \"Time\"                                         \n [4] \"Site.ID\"                                      \n [5] \"Data.recorded.by.\"                            \n [6] \"Data.entered.by.\"                             \n [7] \"Measurements.completed.and.samples.collected.\"\n [8] \"Sea.State\"                                    \n [9] \"Wind.Direction\"                               \n[10] \"Wind.Speed\"                                   \n[11] \"Cloud.Cover.....0...100\"                      \n[12] \"Surface.Sample.Time\"                          \n[13] \"Surface.Temperature..C.\"                      \n[14] \"Surface.Conductivity..μS.cm.\"                 \n[15] \"Surface.Salinity..PSU.\"                       \n[16] \"Surface.DO....saturation.\"                    \n[17] \"Surface.DO..mg.L.\"                            \n[18] \"Surface.pH\"                                   \n[19] \"Surface.Turbidity..NTU.\"                      \n[20] \"Surface.Chl.a.Fluorescence..µg.L.\"            \n[21] \"Surface.Chl.red.Fluorescence..µg.L.\"          \n[22] \"Surface.CDOM..ppb.\"                           \n[23] \"Surface..Upper.Apogee.sensor..Channel.A.\"     \n[24] \"Surface...Lower.Apogee.sensor..Channel.B.\"    \n[25] \"Bottom.Sample.Time\"                           \n[26] \"Bottom.Temperature..C.\"                       \n[27] \"Bottom.Conductivity..μS.cm.\"                  \n[28] \"Bottom.Salinity..PSU.\"                        \n[29] \"Bottom.DO....saturation.\"                     \n[30] \"Bottom.DO..mg.L.\"                             \n[31] \"Bottom.pH\"                                    \n[32] \"Bottom.Turbidity..NTU.\"                       \n[33] \"Bottom.Chl.a..Fluorescence..µg.L.\"            \n[34] \"Bottom.Chl.red.Fluorescence..µg.L.\"           \n[35] \"Bottom.CDOM..ppb.\"                            \n[36] \"Bottom..Upper.Apogee..Channel.A.\"             \n[37] \"Bottom...Lower.Apogee..Channel.B.\"            \n[38] \"Notes..if.applicable.\"                        \n[39] \"Enterococci.MPN.100ml..be.sure.to.convert.\"\nA Simple Descriptive Summary Table\nDo Some Plots"
   },
   {
     "objectID": "content/Nearshore-Datachecks.html#par-figure",
@@ -180,6 +180,20 @@
     "title": "Nearshore_Datachecks",
     "section": "Par Figure",
     "text": "Par Figure\n?@fig-Light Light Attenuation by Site with Bottom Turbidity line overlay."
+  },
+  {
+    "objectID": "Watershed-Field-Datachecks.html",
+    "href": "Watershed-Field-Datachecks.html",
+    "title": "Watershed Field Datachecks",
+    "section": "",
+    "text": "Create Simple Summary Tables\nDo Some Plots"
+  },
+  {
+    "objectID": "Watershed-Field-Datachecks.html#chla-plot",
+    "href": "Watershed-Field-Datachecks.html#chla-plot",
+    "title": "Watershed Field Datachecks",
+    "section": "Chla Plot",
+    "text": "Chla Plot\n?@fig-Chlorophyll Chlorophyll by site with Red Excitation line overlay."
   },
   {
     "objectID": "Watershed.html",
