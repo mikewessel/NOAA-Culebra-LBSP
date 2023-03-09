@@ -1,7 +1,7 @@
 ---
-title: "Nearshore_Datachecks"
+title: "Nearshore-Field-Data-Checks"
 author: "Mwessel"
-date: "2023-03-01"
+date: "2023-03-09"
 output: html_document
 ---
 
@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 
 #rm(list = ls())
+
+x<-Sys.Date()
 ```
 
 
@@ -80,7 +82,7 @@ doit2<-doit2%>%
   mutate(hour=hour(Time),minute=minute(Time),Month=month(Date),Year=year(Date))%>%
   unite(tim, hour,minute, sep = ":")
 
-# only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
+# only pull the latest month for summary - this will work unless there is a sampling event that crosses a month
 doit2<-doit2%>%
  mutate(mxmn=max(Month),mxyr=max(Year))%>%
   filter(Year==mxyr & Month==mxmn)
@@ -89,7 +91,8 @@ labelit<-paste(max(doit2$Year),"-",max(doit2$Month))
 
 ```
 
-A Simple Descriptive Summary Table
+Descriptive Statistics for Latest Sampling Event
+
 ```{r summit}
 #| warning: false
 
@@ -124,7 +127,7 @@ Do Some Plots
 
 ```{r plotit}
 #| label: fig-Light
-#| fig-cap: Sample Counts.
+#| fig-cap: Example Graphic
 #| warning: false
 
 #values - not drawing line
@@ -143,8 +146,6 @@ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
       axis.title.y.right = element_text(colour = "red"),
       )  
 Kd
-
-
 
 ```
 
