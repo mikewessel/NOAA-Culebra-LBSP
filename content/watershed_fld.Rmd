@@ -82,10 +82,10 @@ df2 <- as.data.frame(lapply(doit2, unlist))
 
 
 # Make a table
-
+options(scipen=999)
 sumvars <- df2 %>%
    select(
-     Site.ID,Temp.c, DO.mgl,DO.sat,Chla.blue,CDOM,Chla.red, Turb.ntu, Sal.psu,NH3_field, Chla.phor,
+     Temp.c, DO.mgl,DO.sat,Chla.blue,CDOM,Chla.red, Turb.ntu, Sal.psu,NH3_field, Chla.phor,
     Optical.Brightness,Hour)%>%
      describe(quant=c(.25,.75),na.rm =TRUE) %>%
     as_tibble(rownames="Site")%>%

@@ -29,6 +29,9 @@ library(rlang)
 library(knitr)
 library(lubridate)
 library(kableExtra)
+library(patchwork) # To display 2 charts together
+library(hrbrthemes)
+
 
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
@@ -93,16 +96,19 @@ A Simple Descriptive Summary Table
 #for some reason the names are a list even though its a dataframe so you have to unlist it;
 df2 <- as.data.frame(lapply(doit2, unlist))
 
+options(scipen=999)
 # Make a table
 sumvars <- df2 %>%
-   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,Surf.Time,
+   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,
           Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,
-          Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.Time,Bot.DO.sat,
+          Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.DO.sat,
           Bot.pH,Bot.Chla,Bot.CDOM)%>%
-     describe(quant=c(.25,.75)) %>%
+ # describeBy(group=NULL,digits=4)%>%
+    describe(quant=c(.25,.75),na.rm =TRUE) %>%
     as_tibble(rownames="Site")  %>%
+ #   as.data.frame()%>%
    select(Site,n,mean, sd,min,median,max)%>%
-    kbl(digits=3,caption = paste0(labelit))%>%
+    kbl(digits=4,caption = paste0(labelit))%>%
    kable_styling()
 sumvars
 
@@ -121,13 +127,23 @@ Do Some Plots
 #| warning: false
 
 #values - not drawing line
+
+scaleFactor <- max(doit2$Normalized_KdPAR,na.rm=TRUE) / max(doit2$Bot.Turb,na.rm=TRUE)
+
+
 Kd<-ggplot(doit2, aes(Site.ID))+
-geom_bar(aes(weight = Normalized_KdPAR))+
+geom_bar(aes(weight = Normalized_KdPAR),fill="blue")+
 ylab("Normalized KdPAR") +
-geom_line(aes(x=Site.ID,y=Bot.Turb),size = 1.5, color="red",group = 1 ) +
-scale_y_continuous(sec.axis = sec_axis(~./1, name = "Bottom Turbidity")) +
-theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+geom_line(aes(x=Site.ID,y=Bot.Turb*scaleFactor),size = 1.5, color="red",group = 1 ) +
+scale_y_continuous(sec.axis = sec_axis(~./scaleFactor, name = "Bottom Turbidity")) +
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+      axis.title.y.left = element_text(colour = "blue"),
+      axis.title.y.right = element_text(colour = "red"),
+      )  
 Kd
+
+
 
 ```
 
