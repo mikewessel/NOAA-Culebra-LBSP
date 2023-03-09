@@ -102,7 +102,7 @@ sumvars <- df2 %>%
    select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,
           Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,
           Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.DO.sat,
-          Bot.pH,Bot.Chla,Bot.CDOM)%>%
+          Bot.pH,Bot.Chla,Bot.CDOM,Surf.Lower.Apogee, Surf.Upper.Apogee,Bot.Lower.Apogee,Bot.Upper.Apogee         )%>%
  # describeBy(group=NULL,digits=4)%>%
     describe(quant=c(.25,.75),na.rm =TRUE) %>%
     as_tibble(rownames="Site")  %>%
