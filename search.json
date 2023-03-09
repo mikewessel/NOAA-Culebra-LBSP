@@ -65,16 +65,16 @@
   {
     "objectID": "content/Nearshore-Datachecks.html",
     "href": "content/Nearshore-Datachecks.html",
-    "title": "Nearshore_Datachecks",
+    "title": "Nearshore-Field-Data-Checks",
     "section": "",
-    "text": "A Simple Descriptive Summary Table\nDo Some Plots"
+    "text": "Descriptive Statistics for Latest Sampling Event\nDo Some Plots"
   },
   {
     "objectID": "content/Nearshore-Datachecks.html#par-figure",
     "href": "content/Nearshore-Datachecks.html#par-figure",
-    "title": "Nearshore_Datachecks",
+    "title": "Nearshore-Field-Data-Checks",
     "section": "Par Figure",
-    "text": "Par Figure\nFigure 1 Light Attenuation by Site with Bottom Turbidity line overlay.\n\n\n\n\n\nFigure 1: Sample Counts."
+    "text": "Par Figure\nFigure 1 Light Attenuation by Site with Bottom Turbidity line overlay.\n\n\n\n\n\nFigure 1: Example Graphic"
   },
   {
     "objectID": "content/rendering.html",
@@ -135,14 +135,14 @@
   {
     "objectID": "content/watershed_fld.html",
     "href": "content/watershed_fld.html",
-    "title": "watershed_fld",
+    "title": "Watershed_Field_Data_Checks",
     "section": "",
-    "text": "Create Simple Summary Tables\nDo Some Plots"
+    "text": "Descriptive Statistics For Latest Sampling Event\nDo Some Plots"
   },
   {
     "objectID": "content/watershed_fld.html#chla-plot",
     "href": "content/watershed_fld.html#chla-plot",
-    "title": "watershed_fld",
+    "title": "Watershed_Field_Data_Checks",
     "section": "Chla Plot",
     "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay."
   },
