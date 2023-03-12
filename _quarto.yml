@@ -41,7 +41,7 @@ website:
         text: Data Checks - Nearshore Field
       - href: content/watershed_fld.Rmd
         text: Data Checks - Watershed Field
-      - href: content/watershed-lab.Rmd
+      - href: content/watershed-lab2.Rmd
         text: Data Checks - Watershed Lab
 
 format:
