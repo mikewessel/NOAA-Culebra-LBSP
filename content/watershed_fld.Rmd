@@ -29,6 +29,7 @@ library(kableExtra)
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1QA9c1yXKe87fepSy2IrKXdG5lwptLW3lu7fKk-ahDsc/edit?usp=sharing"))
 
 
+
 #s.data.frame(doit)
 #names(doit)
 
@@ -86,8 +87,8 @@ sumvars <- df2 %>%
      Temp.c, DO.mgl,DO.sat,Chla.blue,CDOM,Chla.red, Turb.ntu, Sal.psu,NH3_field, Chla.phor,
     Optical.Brightness,Hour)%>%
      describe(quant=c(.25,.75),na.rm =TRUE) %>%
-    as_tibble(rownames="Site")%>%
-  select(Site,n,mean,sd,min,median,max)%>%
+    as_tibble(rownames="Param")%>%
+  select(Param,n,mean,sd,min,median,max)%>%
   kbl(digits=3, caption = paste0(labelit))%>%
   kable_styling()
 sumvars
