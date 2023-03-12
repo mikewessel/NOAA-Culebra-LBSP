@@ -126,6 +126,20 @@
     "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay.\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead."
   },
   {
+    "objectID": "content/watershed-lab.html",
+    "href": "content/watershed-lab.html",
+    "title": "Watershed_Lab_Data_Checks",
+    "section": "",
+    "text": "Descriptive Statistics For Latest Sampling Event\nDo Some Plots"
+  },
+  {
+    "objectID": "content/watershed-lab.html#chla-plot",
+    "href": "content/watershed-lab.html#chla-plot",
+    "title": "Watershed_Lab_Data_Checks",
+    "section": "Chla Plot",
+    "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay."
+  },
+  {
     "objectID": "content/Watershed.html",
     "href": "content/Watershed.html",
     "title": "Watershed WQ Data Entry",
