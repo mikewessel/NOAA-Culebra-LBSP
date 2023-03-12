@@ -8,7 +8,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,message=FALSE,warning=FALSE)
-
+#rm(list = ls())
 ```
 
 
@@ -107,11 +107,15 @@ Do Some Plots
 ```{r plotit}
 
 #values - not drawing line
+doit2<-doit2%>%
+ mutate(name = factor(Site.ID, levels=c("Old Man Plaza", "AeropuertoY", "Plant", "P3_out", "P4_out","Bridge", "Turtle Stream", "Coronel Pond")))
 
-Kd<-ggplot(doit2, aes(Site.ID))+
+
+
+Kd<-ggplot(doit2, aes(name))+
 geom_bar(aes(weight = Chla.blue),fill="blue")+
 ylab("Chlorophyll Blue Excitation") +
-geom_line(aes(x=Site.ID,y=Chla.red),size = 1.5, color="red",group = 1 ) +
+geom_line(aes(x=name,y=Chla.red),linewidth = 1.5, color="red",group = 1 ) +
 scale_y_continuous(sec.axis = sec_axis(~./1, name = "Chlorophyll Red Excitation")) +
 theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
       axis.title.y.left = element_text(colour = "blue"),
