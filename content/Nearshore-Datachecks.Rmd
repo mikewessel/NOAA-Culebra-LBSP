@@ -102,15 +102,15 @@ df2 <- as.data.frame(lapply(doit2, unlist))
 options(scipen=999)
 # Make a table
 sumvars <- df2 %>%
-   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,
+   select(Surf.Sal,Surf.DO,Surf.Turb,Surf.Chl.red,Surf.Temp,
           Surf.DO.Sat, Surf.pH, Surf.Chla,Surf.CDOM,Bot.Temp,
           Bot.Sal,Bot.DO,Bot.Turb,Bot.Chl.red,Bot.DO.sat,
           Bot.pH,Bot.Chla,Bot.CDOM,Surf.Lower.Apogee, Surf.Upper.Apogee,Bot.Lower.Apogee,Bot.Upper.Apogee         )%>%
  # describeBy(group=NULL,digits=4)%>%
     describe(quant=c(.25,.75),na.rm =TRUE) %>%
-    as_tibble(rownames="Site")  %>%
+    as_tibble(rownames="Param")  %>%
  #   as.data.frame()%>%
-   select(Site,n,mean, sd,min,median,max)%>%
+   select(Param,n,mean, sd,min,median,max)%>%
     kbl(digits=4,caption = paste0(labelit))%>%
    kable_styling()
 sumvars
@@ -118,12 +118,9 @@ sumvars
 ```
 
 
+## KdPar Figure
 
-Do Some Plots
-
-## Par Figure
-
-@fig-Light Light Attenuation by Site with Bottom Turbidity line overlay.
+@fig-Light Light Attenuation Coefficient (Kd) by Site with Bottom Turbidity Line Overlay.
 
 ```{r plotit}
 #| label: fig-Light
@@ -137,7 +134,7 @@ scaleFactor <- max(doit2$Normalized_KdPAR,na.rm=TRUE) / max(doit2$Bot.Turb,na.rm
 
 Kd<-ggplot(doit2, aes(Site.ID))+
 geom_bar(aes(weight = Normalized_KdPAR),fill="blue")+
-ylab("Normalized KdPAR") +
+ylab("Normalized KdPAR") + xlab("Site")+
 geom_line(aes(x=Site.ID,y=Bot.Turb*scaleFactor),size = 1.5, color="red",group = 1 ) +
 scale_y_continuous(sec.axis = sec_axis(~./scaleFactor, name = "Bottom Turbidity")) +
 theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))+

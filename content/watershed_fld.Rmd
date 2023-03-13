@@ -80,6 +80,7 @@ df2 <- as.data.frame(lapply(doit2, unlist))
 
 
 
+
 # Make a table
 options(scipen=999)
 sumvars <- df2 %>%
