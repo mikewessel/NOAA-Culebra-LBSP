@@ -67,14 +67,14 @@
     "href": "content/Nearshore-Datachecks.html",
     "title": "Nearshore-Field-Data-Checks",
     "section": "",
-    "text": "Descriptive Statistics for Latest Sampling Event\nDo Some Plots"
+    "text": "Descriptive Statistics for Latest Sampling Event"
   },
   {
-    "objectID": "content/Nearshore-Datachecks.html#par-figure",
-    "href": "content/Nearshore-Datachecks.html#par-figure",
+    "objectID": "content/Nearshore-Datachecks.html#kdpar-figure",
+    "href": "content/Nearshore-Datachecks.html#kdpar-figure",
     "title": "Nearshore-Field-Data-Checks",
-    "section": "Par Figure",
-    "text": "Par Figure\nFigure 1 Light Attenuation by Site with Bottom Turbidity line overlay.\n\n\n\n\n\nFigure 1: Example Graphic"
+    "section": "KdPar Figure",
+    "text": "KdPar Figure\nFigure 1 Light Attenuation Coefficient (Kd) by Site with Bottom Turbidity Line Overlay.\n\n\n\n\n\nFigure 1: Example Graphic"
   },
   {
     "objectID": "content/rendering.html",
@@ -144,14 +144,14 @@
     "href": "content/watershed-lab2.html",
     "title": "Watershed_Lab_Data_Checks",
     "section": "",
-    "text": "Descriptive Statistics For Latest Sampling Event\nDo Some Plots"
+    "text": "Descriptive Statistics For Latest Sampling Event\nWatershed Nutrient Plot"
   },
   {
-    "objectID": "content/watershed-lab2.html#chla-plot",
-    "href": "content/watershed-lab2.html#chla-plot",
+    "objectID": "content/watershed-lab2.html#nitrogen-constituents-by-site",
+    "href": "content/watershed-lab2.html#nitrogen-constituents-by-site",
     "title": "Watershed_Lab_Data_Checks",
-    "section": "Chla Plot",
-    "text": "Chla Plot\nChlorophyll by site with Red Excitation line overlay."
+    "section": "Nitrogen Constituents by Site",
+    "text": "Nitrogen Constituents by Site\n\n\n\n\n\nFecal Coliform Plot"
   },
   {
     "objectID": "content/Watershed.html",
