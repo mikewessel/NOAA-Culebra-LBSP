@@ -35,6 +35,7 @@ library(patchwork) # To display 2 charts together
 library(hrbrthemes)
 
 
+
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
 #is.data.frame(doit)
