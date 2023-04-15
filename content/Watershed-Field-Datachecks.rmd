@@ -1,7 +1,7 @@
 ---
 title: "Watershed_Fieldchecks"
 author: "Mwessel"
-date: "2023-03-01"
+date: "`r Sys.Date()`"
 output: html_document
 editor_options:
   chunk_output_type: console
