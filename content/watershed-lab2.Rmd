@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = FALSE,message=FALSE,warning=FALSE)
 ```
 
 
+
 ```{r mani}
 
 library(googlesheets4)
@@ -55,7 +56,7 @@ rename(
 mutate(Hr=hour(Time),Hour=hour(Time),Minute=minute(Time),Month=month(Date),Year=year(Date))%>%
 unite(Time, Hr,Minute, sep = ":")
 
-# only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
+# only pull the latest month for summary - this will work unless there is a sampling event that crosses a month
 doit2<-doit2%>%
  mutate(mxmn=max(Month),mxyr=max(Year))%>%
   filter(Year==mxyr & Month==mxmn)
@@ -68,18 +69,45 @@ Descriptive Statistics For Latest Sampling Event
 
 ```{r summit}
 
+
+
 #| warning: false
 #for some reason the names are a list even though its a dataframe so you have to unlist it;
+
+varit<- c('Monochlorine.mgl','NH4.mgl','NO3.mgl','TN.mgl','Flow.gsec','Ecoli.100ml','Hour','NO2.mgl','NH3.mgl','OP.mgl','TKN.mgl','Fcoli.100ml')
+
 df2 <- as.data.frame(lapply(doit2, unlist))
+df2<-df2%>%
+  mutate(across(all_of(varit), ~gsub(">", "", .)))%>%
+ mutate(across(all_of(varit),as.numeric))
+#sapply(df2,class)
+
+# try and pull qualifiers from fields
+
+
+#qual<-df2%>% 
+#mutate(across(all_of(varit), ~gsub(">", "", .)))%>%
+#mutate(across(all_of(varit),as.numeric))%>%  
+#mutate_at(c('Monochlorine.mgl','NH4.mgl','NO3.mgl','TN.mgl','Flow.gsec','Ecoli.100ml','#Hour','NO2.mgl','NH3.mgl','OP.mgl','TKN.mgl','Fcoli.100ml'), as.numeric)%>% 
+#   describe(quant=c(.25,.75),na.rm =TRUE,check=TRUE,omit=FALSE) %>%
+#    as_tibble(rownames="Param")%>%
+#  select(Param,n,mean,sd,min,median,max)%>%
+#  kbl(digits=3, caption = paste0(labelit))%>%
+#  kable_styling()
+#sumvars
+#max(doit2$TN.mgl)
+#sapply(qual,class)
 
 
 
-# Make a table
+
+# Make a table -anything that had a > gets excluded for some reason
 options(scipen=999)
 sumvars <- df2 %>%
    select(
 Monochlorine.mgl,NH4.mgl,NO3.mgl,TN.mgl,Flow.gsec,Ecoli.100ml,Hour,NO2.mgl,NH3.mgl,OP.mgl,TKN.mgl,Fcoli.100ml
 )%>%
+#mutate_at(c('Monochlorine.mgl','NH4.mgl','NO3.mgl','TN.mgl','Flow.gsec','Ecoli.100ml','#Hour','NO2.mgl','NH3.mgl','OP.mgl','TKN.mgl','Fcoli.100ml'), as.numeric)%>% 
    describe(quant=c(.25,.75),na.rm =TRUE) %>%
     as_tibble(rownames="Param")%>%
   select(Param,n,mean,sd,min,median,max)%>%
@@ -100,6 +128,7 @@ Watershed Nutrient Plot
 #values - not drawing line
 
 plotit<-doit2 %>%
+ mutate_at(c('Monochlorine.mgl','NH4.mgl','NO3.mgl','TN.mgl','Flow.gsec','Ecoli.100ml','Hour','NO2.mgl','NH3.mgl','OP.mgl','TKN.mgl','Fcoli.100ml'), as.numeric)%>%
   pivot_longer(
     cols = c(TN.mgl,NO3.mgl,NO2.mgl,TKN.mgl),
     names_to = "Param",
@@ -126,7 +155,8 @@ Fecal Coliform Plot
 ```{r plotit2}
 
 plotit2<-doit2 %>%
-  select(Site.ID,Ecoli.100ml, Fcoli.100ml)%>%
+   mutate_at(c('Ecoli.100ml','Fcoli.100ml'), as.numeric)%>%
+    select(Site.ID,Ecoli.100ml, Fcoli.100ml)%>%
   pivot_longer(
     cols = c(Ecoli.100ml, Fcoli.100ml),
     names_to = "Parm",

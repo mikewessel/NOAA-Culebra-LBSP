@@ -16,7 +16,6 @@ x<-Sys.Date()
 ```
 
 
-
 ```{r mani}
 #| warning: false
 #| echo: false
@@ -99,7 +98,7 @@ Descriptive Statistics for Latest Sampling Event
 ```{r summit}
 #| warning: false
 
-#for some reason the names are a list even though its a dataframe so you have to unlist it;
+#for some reason the names are a list even though its a dataframe so you have to #unlist it;
 df2 <- as.data.frame(lapply(doit2, unlist))
 
 options(scipen=999)
