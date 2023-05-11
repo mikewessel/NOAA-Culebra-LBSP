@@ -78,9 +78,15 @@ Descriptive Statistics For Latest Sampling Event
 
 #| warning: false
 #for some reason the names are a list even though its a dataframe so you have to unlist it;
+#df2 <- as.data.frame(lapply(doit2, unlist))
+
+
+varit<- c('Temp.c','DO.mgl','DO.sat','Chla.blue','CDOM','Chla.red','Turb.ntu', 'Sal.psu','NH3_field','Chla.phor','Optical.Brightness','Hour')
+
 df2 <- as.data.frame(lapply(doit2, unlist))
-
-
+df2<-df2%>%
+#  mutate(across(all_of(varit), ~gsub(">", "", .)))%>%
+ mutate(across(all_of(varit),as.numeric))
 
 
 # Make a table
@@ -111,17 +117,19 @@ Do Some Plots
 ```{r plotit}
 
 #values - not drawing line
-doit2<-doit2%>%
+doit2<-df2%>%
  mutate(name = factor(Site.ID, levels=c("Old Man Plaza", "AeropuertoY", "Plant", "P3_out", "P4_out","Bridge", "Turtle Stream", "Coronel Pond")))
 
+scaleFactor <- max(doit2$Chla.red,na.rm=TRUE) / max(doit2$Chla.blue,na.rm=TRUE)
 
+# this plot doesnt use scalefactor - see nearshore program for how to use it
 
 Kd<-ggplot(doit2, aes(name))+
 geom_bar(aes(weight = Chla.blue),fill="blue")+
 ylab("Chlorophyll Blue Excitation") +
 geom_line(aes(x=name,y=Chla.red),linewidth = 1.5, color="red",group = 1 ) +
 scale_y_continuous(sec.axis = sec_axis(~./1, name = "Chlorophyll Red Excitation")) +
-theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
       axis.title.y.left = element_text(colour = "blue"),
       axis.title.y.right = element_text(colour = "red"),
       )
