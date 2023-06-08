@@ -32,6 +32,7 @@ doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1QA9c1yXKe87
 
 
 
+
 #s.data.frame(doit)
 #names(doit)
 
@@ -82,6 +83,7 @@ Descriptive Statistics For Latest Sampling Event
 
 
 varit<- c('Temp.c','DO.mgl','DO.sat','Chla.blue','CDOM','Chla.red','Turb.ntu', 'Sal.psu','NH3_field','Chla.phor','Optical.Brightness','Hour')
+
 
 df2 <- as.data.frame(lapply(doit2, unlist))
 df2<-df2%>%

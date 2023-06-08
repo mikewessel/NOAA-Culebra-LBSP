@@ -29,6 +29,8 @@ library(kableExtra)
 library(forcats)
 library(reshape2)
 
+#rm(list = ls())
+
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1qWWiaY-w2_Z-NJINq-mnOCpXk_fTmuQxA0sgXArYbgg/edit?usp=sharing"))
 
@@ -173,6 +175,7 @@ theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
   #    axis.title.y.right = element_text(colour = "red"),
       )
 Nuts2
+
 
 ```
 
