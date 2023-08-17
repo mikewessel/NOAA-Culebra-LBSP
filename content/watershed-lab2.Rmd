@@ -29,6 +29,10 @@ library(kableExtra)
 library(forcats)
 library(reshape2)
 
+drive_auth(email="inferential.consulting@gmail.com")
+gs4_auth(token = drive_token())
+#gs4_auth(email="inferential.consulting@gmail.com")
+
 #rm(list = ls())
 
 # read in googlesheet
