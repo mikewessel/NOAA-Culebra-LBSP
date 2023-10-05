@@ -30,9 +30,6 @@ library(kableExtra)
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1QA9c1yXKe87fepSy2IrKXdG5lwptLW3lu7fKk-ahDsc/edit?usp=sharing"))
 
-
-
-
 #s.data.frame(doit)
 #names(doit)
 
@@ -61,7 +58,7 @@ Notes = Notes.                        ,
 Salinty.hand = Salinity..handheld.    ,
 Turb.hach = Turbidity..hach.
   )%>%
-mutate(Hr=hour(Date.Time),Hour=hour(Date.Time),Minute=minute(Date.Time),Month=month(Date),Year=year(Date))%>%
+mutate(Hr=hour(Date.Time),Hour=hour(Date.Time),Minute=minute(Date.Time),Month=as.numeric(month(Date)),Year=as.numeric(year(Date)))%>%
 unite(Time, Hr,Minute, sep = ":")
 
 # only pull the latest month for summary - this will work unless threre is a sampling event that crosses a month
@@ -103,7 +100,6 @@ sumvars <- df2 %>%
   kbl(digits=3, caption = paste0(labelit))%>%
   kable_styling()
 sumvars
-
 
 ```
 

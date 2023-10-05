@@ -75,8 +75,6 @@ Descriptive Statistics For Latest Sampling Event
 
 ```{r summit}
 
-
-
 #| warning: false
 #for some reason the names are a list even though its a dataframe so you have to unlist it;
 

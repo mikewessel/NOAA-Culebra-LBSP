@@ -10,6 +10,27 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
+library(googlesheets4)
+library(googledrive)
+library(ggplot2)
+library(dplyr)
+library(psych)
+library(tidyverse)
+library(rlang)
+library(knitr)
+library(lubridate)
+library(kableExtra)
+library(forcats)
+library(reshape2)
+library(data.table)
+
+
+# grabs authorization token locally and populates
+drive_auth(email="inferential.consulting@gmail.com")
+gs4_auth(token = drive_token())
+#gs4_auth(email="inferential.consulting@gmail.com")
+
+
 #rm(list = ls())
 
 x<-Sys.Date()
@@ -21,28 +42,13 @@ x<-Sys.Date()
 #| echo: false
 #| message: false
 
-
-library(googlesheets4)
-library(googledrive)
-library(ggplot2)
-library(dplyr)
-library(psych)
-library(tidyverse)
-library(rlang)
-library(knitr)
-library(lubridate)
-library(kableExtra)
-library(patchwork) # To display 2 charts together
-library(hrbrthemes)
-
-
-
 # read in googlesheet
 doit<-data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1O3O3QfYCOVuQg-1aztPyQRtN_W9uO2i4yToqhNFGZ1Y/edit?usp=sharing"))
 #is.data.frame(doit)
-#names(doit)
+#names(doit)        
 
-
+#s.data.frame(doit)
+#names(doit)        
 #rename variables and calculate KdPar
 doit2<-doit%>%
 rename(
@@ -77,8 +83,10 @@ rename(
  Entero = Enterococci.MPN.100ml..be.sure.to.convert.
 # Bot.Cond    = Bottom.Conductivity..μS.cm., these two dont want to work
 # Surf.Cond   = Surface.Conductivity..uS.cm.,
-  ) %>%
-mutate(Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee))))
+  ) 
+doit2<-doit2|>
+mutate(Surf.Lower.Apogee = as.numeric(unlist(Surf.Lower.Apogee)), Surf.Upper.Apogee = as.numeric(unlist(Surf.Upper.Apogee)), Bot.Lower.Apogee = as.numeric(unlist(Bot.Lower.Apogee)), Bot.Upper.Apogee = as.numeric(unlist(Bot.Upper.Apogee)),
+Normalized_KdPAR=abs(log((Surf.Lower.Apogee/Surf.Upper.Apogee)/(Bot.Lower.Apogee/Bot.Upper.Apogee))))
 
 doit2<-doit2%>%
   mutate(hour=hour(Time),minute=minute(Time),Month=month(Date),Year=year(Date))%>%
